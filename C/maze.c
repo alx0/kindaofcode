@@ -13,6 +13,22 @@
 
 #include <stdio.h>
 
+#define ROWS 7
+#define COL 5
+
+void print ( char m[ROWS][COL] ) {
+   
+   int i , j ;
+
+   for ( i = 0 ; i < ROWS ; i++ ) {
+      for ( j = 0 ; j < COL ; j++ ) {
+	 printf("%c ",m[i][j]);
+	}
+      puts("");
+   }
+
+}
+
 typedef struct {
 
    char destra ;
@@ -27,7 +43,7 @@ int main ( ) {
    intorno l ;
    char a , start ;
    int x  , y ;
-   char lab[7][5] = { { 'P' , 'P' , 'P' , 'P' , 'P'} ,
+   char lab[ROWS][COL] = { { 'P' , 'P' , 'P' , 'P' , 'P'} ,
       		     { 'E' , ' ' , ' ' , ' ' , 'P' },
 		     { 'P' , 'P' , ' ' , ' ' , 'P' },
 		     { 'P' , ' ' , 'P' , ' ' , 'P' },
@@ -47,34 +63,38 @@ int main ( ) {
 
       if ( l.sopra == 'E' || l.destra == 'E' || l.sinistra == 'E' || l.sotto == 'E' ) {
 
+	 lab[x][y] = 'F' ;
 	 a = 'E' ;
 	 puts("THANK GOD! THE OUTPUT! :3");
 	 break ;
       }
 
       else if ( l.destra == ' ' ) {
+	 lab[x][y] = 'F' ;
 	 y++ ;
 	 a = ' ' ;
       }
 	 
       else if ( l.sopra == ' ' ) {
+	 lab[x][y] = 'F' ;
 	 x-- ;
 	 a = ' ' ;
       }
 
       else if ( l.sinistra == ' ' ) {
+	 lab[x][y] = 'F' ;
 	 y-- ;
 	 a = ' ' ;
       }
 
       else if ( l.sotto == ' ' ) {
+	 lab[x][y] = 'F' ;
 	 x++ ;
 	 a = ' ' ;
       }
 
        if ( l.destra == 'P' && l.sopra == 'P'  ) {
-
-	  lab[x][y] = 'P' ;
+	  lab[x][y] = 'F' ;
 	  y-- ;
 	  a = ' ' ;
 
@@ -82,6 +102,8 @@ int main ( ) {
 
 
      }
+
+   print( lab ) ;
 
 
    return 0 ;
