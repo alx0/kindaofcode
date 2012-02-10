@@ -22,18 +22,9 @@ typedef struct {
 
 } intorno  ;
 
-typedef struct {
-
-   int x ;
-   int y ;
-
-} last  ;
-
 int main ( ) {
 
    intorno l ;
-   last f ;
-   last no ;
    char a , start ;
    int x  , y ;
    char lab[7][5] = { { 'P' , 'P' , 'P' , 'P' , 'P'} ,
@@ -45,11 +36,6 @@ int main ( ) {
 		     { 'P' , 'P' , 'G' , 'P' , 'P' }} ;
    x = 6 ;
    y = 2 ;
-
-   f.x = x ;
-   f.y = y ;
-   no.x = 0 ;
-   no.y = 0 ;
 
    
    while ( a != 'E' ) {
@@ -67,29 +53,21 @@ int main ( ) {
       }
 
       else if ( l.destra == ' ' ) {
-	 f.x = x ;
-	 f.y = y ;
 	 y++ ;
 	 a = ' ' ;
       }
 	 
       else if ( l.sopra == ' ' ) {
-	 f.x = x ;
-	 f.y = y ;
 	 x-- ;
 	 a = ' ' ;
       }
 
       else if ( l.sinistra == ' ' ) {
-	 f.x = x ;
-	 f.y = y ;
 	 y-- ;
 	 a = ' ' ;
       }
 
       else if ( l.sotto == ' ' ) {
-	 f.x = x ;
-	 f.y = y ;
 	 x++ ;
 	 a = ' ' ;
       }
