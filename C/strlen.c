@@ -1,9 +1,10 @@
+//strlen's re-implementation
 #include <stdio.h>
 #include <stdlib.h>
 
 #define LEN 20
 
-int stringlen( char* str ) {
+size_t stringlen( char* str ) {
 
 	char c = str[0] ;
 	int i = 0 ;
@@ -27,7 +28,7 @@ int main( ) {
 	printf("PUT A STRING , GODDAMMIT : ") ;
 	scanf("%s",str) ;
 
-	printf("%d\n",stringlen(str)) ;
+	printf("%ld\n",stringlen(str)) ;
 
 	return 0 ;
 
