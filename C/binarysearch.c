@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <time.h>
 
 const int MAX = 10 ;
 
