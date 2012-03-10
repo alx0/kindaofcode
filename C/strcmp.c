@@ -1,3 +1,4 @@
+//strcmp's re-implementation
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>

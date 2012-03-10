@@ -36,7 +36,7 @@ void print ( int m[X][Y] ) {
 
 }
 
-int get_adjacenty ( int x ) { //This will return the y coordinate of the city located upon
+int get_adjacenty ( int x ) { 
 
 	for ( int i = 0 ; i < Y ; i++ ) {
 
