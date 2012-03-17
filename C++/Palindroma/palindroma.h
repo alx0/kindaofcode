@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QTextEdit>
+#include <QString>
 
 namespace Ui {
     class Palindroma;
