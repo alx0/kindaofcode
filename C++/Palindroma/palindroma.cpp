@@ -17,6 +17,7 @@ Palindroma::~Palindroma()
 bool Palindroma::OnClick() {
 
     string = ui->textEdit->toPlainText() ;
+    string = string.toLower() ;
 
     for ( int i = 0 ; i < string.length() / 2 ; i++ ) {
 
